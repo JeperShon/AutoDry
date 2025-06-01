@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AutoDry</string>
+
+    <!-- Bluetooth status -->
+    <string name="bt_disconnected">Bluetooth: Disconnected</string>
+
+    <!-- Buttons -->
+    <string name="turn_on">Turn ON</string>
+    <string name="turn_off">Turn OFF</string>
+
+    <!-- Weather -->
+    <string name="city_manila">City: Manila</string>
+    <string name="temp_placeholder">--°C</string>
+
+    <!-- Content descriptions -->
+    <string name="weather_icon_desc">Weather icon</string>
+
+    <string name="power_on">Power: ON</string>
+    <string name="power_off">Power: OFF</string>
+</resources>

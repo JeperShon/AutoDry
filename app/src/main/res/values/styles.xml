@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme using MaterialComponents dark style -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Backgrounds -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">          @color/colorSurface</item>
+        <item name="android:navigationBarColor">@color/colorSurface</item>
+
+        <!-- Primary & Secondary -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <!-- Text colors -->
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:textColorPrimary">@color/colorOnBackground</item>
+        <item name="android:textColorSecondary">@color/colorOnSurface</item>
+    </style>
+</resources>

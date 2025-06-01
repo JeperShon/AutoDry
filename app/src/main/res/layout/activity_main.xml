@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Bluetooth Status + Choose Device Row -->
+    <LinearLayout
+        android:id="@+id/bluetooth_row"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvBtStatus"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@string/bt_disconnected"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChooseDevice"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Choose Device"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvChosenDevice"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:text="No device chosen"
+        app:layout_constraintTop_toBottomOf="@id/bluetooth_row"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Power Indicator -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardPower"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvChosenDevice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/vPowerDot"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/circle_shape"
+                android:backgroundTint="@color/offColor" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPowerState"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+
+                android:text="@string/power_off"
+                android:layout_marginStart="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ON / OFF Buttons -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/turn_on"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardPower"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/onColor"
+        android:textColor="@color/white"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOff"
+        style="@style/Widget.MaterialComponents.Button"
+        android:text="@string/turn_off"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnOn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/offColor"
+        android:textColor="@color/white"/>
+
+    <!-- Weather Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardWeather"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@id/btnOff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCity"
+                android:layout_marginTop="20dp"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_manila" />
+
+            <ImageView
+                android:id="@+id/ivWeatherIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/weather_icon_desc" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTemp"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/temp_placeholder" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

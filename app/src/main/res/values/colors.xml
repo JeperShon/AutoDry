@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark surface & background -->
+    <color name="colorBackground">#89b3f5</color>
+    <color name="colorSurface">   #1E1E1E</color>
+
+    <!-- Primary accent (teal) -->
+    <color name="colorPrimary">   #03DAC6</color>
+    <color name="colorOnPrimary"> #000000</color>
+
+    <!-- Secondary accent (amber) -->
+    <color name="colorSecondary"> #FFC107</color>
+    <color name="colorOnSecondary">#000000</color>
+
+    <color name="onColor">#4CAF50</color>   <!-- green -->
+    <color name="offColor">#F44336</color>  <!-- red -->
+
+    <!-- Text colors -->
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorOnSurface">   #E0E0E0</color>
+
+    <color name="white">#FFFFFF</color>     <!-- for text -->
+    <color name="black">#000000</color>
+</resources>
